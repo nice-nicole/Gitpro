@@ -1,15 +1,15 @@
 <!-- <p>git-form works!</p> -->
 <div class="container-fluid">
-    <h2 class="text-center">Create a new Goal</h2>
+    <h2 class="text-center">Github Search</h2>
     <hr>
-    <form #goalForm='ngForm'>
+    <form>
         <div class="form-group">
   
             <label for="name">Name</label>
-            <input type="text" class="form-control" id="username" [(ngModel)]="newUser.username" name="username" #username='ngModel' required>
-            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+            <input type="text" class="form-control" id="username"  name="username"  required>
+            <!-- <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
               <p>Name is required</p>
-            </div>
+            </div> -->
         </div>
    
         <button type="submit" class="btn btn-success">Search</button>
