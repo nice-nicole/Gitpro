@@ -17,9 +17,7 @@ export class UserComponent implements OnInit {
   constructor( private userService:UserRequestService) { 
     // this.user= new User("","","",0);
   }
-  search(username:string){
-    
-  }
+
 
   ngOnInit() {
     this.userService.userRequest()

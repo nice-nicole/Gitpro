@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  key:"eccf9bfcfe716043b0f70c8996298e079006a4eb"
+  key:"d0ed53e694dd6faae8f2020518300cc091d3533a",
+  apiUrl:"https://api.github.com/users/nice-nicole/repos?access_token=d0ed53e694dd6faae8f2020518300cc091d3533a"
 };
 
 /*
