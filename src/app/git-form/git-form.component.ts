@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GitFormComponent implements OnInit {
 
+  getRepos(username){
+    this.router.navigate["/users.username"]
+  }
   constructor() { }
 
   ngOnInit() {
