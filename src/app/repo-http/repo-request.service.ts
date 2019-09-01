@@ -16,14 +16,14 @@ export class RepoRequestService {
     // this.repos=new Repository("","",new Date());
     this.repos=[];
   }
-  repoRequest(){
+  repoRequest(username){
     interface ApiResponse{
       name:string;
       html_url:string;
       created_at:Date;
     }
     let promise= new Promise((resolve, reject)=>{
-      this.http.get<ApiResponse>("https://api.github.com/users/nice-nicole/repos?access_token="+environment.key).toPromise().then(response=>{
+      this.http.get<ApiResponse>("https://api.github.com/users/"+username+"/repos?access_token="+environment.key).toPromise().then(response=>{
         
       for(var i in response)
         this.repos.push(response[i])

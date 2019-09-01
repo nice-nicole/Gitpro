@@ -1,10 +1,10 @@
 <!-- <p>user works!</p> -->
+
 <p>{{user.login}}</p>
 <p>{{user.name}}</p>
 <img src="{{user.avatar_url}}">
 <p>{{user.public_repos}}</p>
 <div *ngFor ='let repo of repos'>
-<p>{{repo.name}}</p>
-<p>{{repo.html_url}}</p>
-<p>{{repo.created_at}}</p>
+<p>{{repo.name}} created on {{repo.created_at}}  <a href="{{repo.html_url}}">View Details</a></p>
+
 </div>

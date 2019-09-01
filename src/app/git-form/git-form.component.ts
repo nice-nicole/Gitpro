@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
+// import { from } from 'rxjs';
 @Component({
   selector: 'app-git-form',
   templateUrl: './git-form.component.html',
@@ -7,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GitFormComponent implements OnInit {
 
-  getRepos(username){
-    this.router.navigate["/users.username"]
-  }
-  constructor() { }
+goToUrl(username){
+  this.router.navigate(['/user',username])
+}
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }

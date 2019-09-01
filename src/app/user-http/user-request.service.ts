@@ -12,9 +12,8 @@ export class UserRequestService {
   constructor(private http: HttpClient) {
     this.user = new User("","","",0);
    }
- 
   
-   userRequest(){
+   userRequest(username){
     interface ApiResponse{
       login:string;
       name:string;
@@ -23,7 +22,7 @@ export class UserRequestService {
 
     }
     let promise = new Promise((resolve,reject)=>{
-      this.http.get<ApiResponse>("https://api.github.com/users/nice-nicole?access_token="+environment.key).toPromise().then(response=>{
+      this.http.get<ApiResponse>("https://api.github.com/users/"+username+"?access_token="+environment.key).toPromise().then(response=>{
         this.user.login = response.login
         this.user.name = response.name
         this.user.avatar_url = response.avatar_url
