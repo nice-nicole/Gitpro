@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { User } from '../user';
-import { ActivatedRoute,ParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 import { UserRequestService } from '../user-http/user-request.service';
 import { RepoRequestService } from '../repo-http/repo-request.service';
 import { Repository } from '../repository';
-import { Router } from '@angular/router';
-import { from } from 'rxjs';
+import { Location } from '@angular/common'
+
 
 @Component({
   selector: 'app-user',
@@ -16,24 +16,22 @@ import { from } from 'rxjs';
 export class UserComponent implements OnInit {
 
   // users:User[];
-  user:User;
-  repos:Repository[];
+  user: User;
+  repos: Repository[];
 
-
-  constructor( private userService:UserRequestService, private repoService:RepoRequestService, private route:ActivatedRoute) { 
+  constructor(private userService: UserRequestService, private repoService: RepoRequestService, private route: ActivatedRoute) {
     // this.user= new User("","","",0);
+  
   }
-
 
   ngOnInit() {
     let username = this.route.snapshot.paramMap.get('username');
     this.userService.userRequest(username)
     this.repoService.repoRequest(username);
-    this.user= this.userService.user
   
-   
-    this.repos= this.repoService.repos;
-    // console.log(this.repos)
+    this.user = this.userService.user
+    this.repos = this.repoService.repos;
   }
+
 
 }

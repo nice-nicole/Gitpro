@@ -1,2 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~bootstrap/dist/css/bootstrap.css"
+@import "~bootstrap/dist/css/bootstrap.css";
+/* @import url('https://fonts.googleapis.com/css?family=Lobster+Two&display=swap'); */
+@import url('https://fonts.googleapis.com/css?family=Lobster|Lobster+Two&display=swap');
+
+body{
+    font-family: 'Lobster', cursive;
+    background-position-y: fixed;
+    overflow-x: hidden;
+    overflow-y: auto;
+    top:0;
+    width:100%;
+    z-index: 10000;
+    left:0;
+    padding: 2,5em  2.5em 0.5em 2.5em;
+}
+input[type=text], textarea{
+    border: none;
+    border-bottom: 2px solid;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: rgb(131, 228, 131);
+    text-align: center;
+    width: 35%;
+}

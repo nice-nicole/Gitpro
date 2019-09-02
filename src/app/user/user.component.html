@@ -1,10 +1,39 @@
-<!-- <p>user works!</p> -->
+<div class="container" style="display: flex; flex-direction: row; justify-content: space-between">
+    <div class="row">
+        <div class="col-md-1">
+            <p>{{user.login}}</p>
+            <img src="{{user.avatar_url}}" style=" border-radius: 50%">
 
-<p>{{user.login}}</p>
-<p>{{user.name}}</p>
-<img src="{{user.avatar_url}}">
-<p>{{user.public_repos}}</p>
-<div *ngFor ='let repo of repos'>
-<p>{{repo.name}} created on {{repo.created_at}}  <a href="{{repo.html_url}}">View Details</a></p>
+        </div>
+    </div>
+
+    <div class="col-md-5">
+        <p>username: {{user.login}}</p>
+        {{user.login}} github account:<p style="text-decoration: underline"> {{user.html_url}} </p>
+        <p>number of repositories: {{user.public_repos}}</p>
+
+    </div>
+
+
+    <div class="col-md-6" style="margin-left: -10%">
+        <!-- <div class="panel-Heading">
+            <h3 class="panel-title">Repos</h3>
+        </div> -->
+        <div class="panel-body" *ngFor="let repo of repos">
+            <p class="clearfix">
+                {{repo.name}} created on {{repo.created_at|date}} <a href="{{repo.html_url}}" target="_blank"
+                    class="btn btn-sm btn-primary pull-right">View Project on GitHub</a>
+            </p>
+
+            <hr>
+        </div>
+    </div>
 
 </div>
+<!-- <p>{{user.public_repos}}</p>
+<div *ngFor='let repo of repos' class="float-left">
+    <p>{{repo.name}} created on {{repo.created_at|date}} <a href="{{repo.html_url}}"
+            class="list-group-item list-group-item-action active"
+            style="width:10%; padding: 0%; padding-left: 0%">Repository</a></p>
+
+</div> -->
