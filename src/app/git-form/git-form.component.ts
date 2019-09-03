@@ -10,10 +10,11 @@ import { Router } from '@angular/router';
 })
 export class GitFormComponent implements OnInit {
 
-goToUrl(username){
- 
-  this.router.navigate(['/user',username]);
-}
+
+  goToUrl(username){
+    this.router.navigate(['/user',username]);
+  }
+
   constructor(private router:Router) { }
 
   ngOnInit() {

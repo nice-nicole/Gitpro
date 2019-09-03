@@ -5,7 +5,8 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 import { UserRequestService } from '../user-http/user-request.service';
 import { RepoRequestService } from '../repo-http/repo-request.service';
 import { Repository } from '../repository';
-import { Location } from '@angular/common'
+// import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -19,7 +20,8 @@ export class UserComponent implements OnInit {
   user: User;
   repos: Repository[];
 
-  constructor(private userService: UserRequestService, private repoService: RepoRequestService, private route: ActivatedRoute) {
+
+  constructor(private userService: UserRequestService, private repoService: RepoRequestService, private route: ActivatedRoute, private router:Router) {
     // this.user= new User("","","",0);
   
   }

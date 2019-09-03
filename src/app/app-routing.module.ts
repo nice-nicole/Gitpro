@@ -6,7 +6,6 @@ import { GitFormComponent } from './git-form/git-form.component';
 
 
 const routes: Routes = [
-  {path:'user', component:UserComponent},
   {path:'git-form', component: GitFormComponent},
   {path:'user/:username', component: UserComponent}
 ];
